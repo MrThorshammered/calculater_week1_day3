@@ -1,4 +1,4 @@
- var calcType = prompt('Would you like a simple or advanced calculator?');
+ var calcType = prompt('Would you like a simple, advanced or BMI calculator?');
 
  if (calcType === 'simple'){
 
@@ -55,10 +55,39 @@ if (op === 'plus'){
 
  alert("your answer is "+ answer)
 
+}else if(calcType === 'BMI'){
+
+ var weight = prompt('Imperial or Metric?');
+
+ if (weight === 'Imperial'){
+
+ var num1 = parseInt(prompt('Weight in Pounds'));
+ console.log('num1', num1);
+
+ var num2 = parseInt(prompt('Height in Inches'));
+ console.log('num2', num2);
+ 
+ var answer = (num1 / (num2 * num2)) * 703;
+
+alert("your BMI is " + answer)
+
+}else if (weight === 'Metric'){
+
+	var num1 = parseInt(prompt('Weight in Kilos'));
+ console.log('num1', num1);
+
+ var num2 = parseInt(prompt('Height in Meters'));
+ console.log('num2', num2);
+ 
+ var answer = num1 / (num2 * num2);
+
+ alert("your BMI is " + answer)
+
+};
+
 }else{
 	alert("error")
 };
 
 
 
- // alert("Why is your console not open?");
